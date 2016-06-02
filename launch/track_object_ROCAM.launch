@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <!-- Camera driver -->
+  <node pkg="rocam" type="rocam_video" name="ROCAM"/>
+  <node pkg="rocam" type="rocam_control" name="control_ROCAM_motion"/>
+  <node pkg="find_object_2d" type="compute_cam_translate" name="compute_Cam_translate"/>
+  <node pkg="rocam" type="rocam_track" name="track_detected_object"/>
+</launch>
